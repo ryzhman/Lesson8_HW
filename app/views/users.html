@@ -1,0 +1,27 @@
+<div class="container-fluid">
+	<div class="row">
+		<table class="table">
+			<thead>
+				<th>#1</th>
+				<th>Name</th>
+				<th>Email</th>
+				<th>Age</th>
+			</thead>
+			<tr ng-repeat="user in ctrl.userList">
+				<td>{{$index}}</td>
+				<td>
+					<a href ui-sref="admin.viewUser({userId: $index})">{{user.name}}</a>
+				</td>
+				<td>{{user.email}}</td>
+				<td>{{user.age}}</td>
+			</tr>
+		</table>
+	</div>
+
+	<div class="row">
+		<div class="col-xs-12">
+			<a href class="btn btn-success" ui-sref="admin.createUser.index">Add user</a>
+		</div>
+	</div>
+
+</div>

@@ -1,0 +1,13 @@
+<table>
+    <tr>
+        <td>
+            <a ng-click="changeItem()">{{item.text}}</a>
+        </td>
+        <td>
+            <form ng-submit="saveItem()" ng-show="shouldItemBeChanged">
+                <input type="text" ng-model="tempI">
+                <button type="submit">Save</button>
+            </form>
+        </td>
+    </tr>
+</table>

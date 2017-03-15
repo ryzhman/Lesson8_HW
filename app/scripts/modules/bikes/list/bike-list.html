@@ -1,0 +1,41 @@
+<div class="container">
+	<div class="row">
+		<div class="col-xs-3">
+			<div class="panel panel-primary">
+				<div class="panel-header">
+					Network Info:
+				</div>
+				<div class="panel-body">
+					<h1>
+						{{ctrl.currentNetwork.name}}
+					</h1>
+					<p>Stations count: {{ctrl.currentNetwork.stations.length}}</p>
+				</div>
+			</div>
+		</div>
+		<div class="col-xs-9">
+			<table class="table table-striped">
+  				<thead>
+  					<tr>
+  						<th>
+  							Name
+  						</th>
+  						<th>
+  							Companies
+  						</th>
+  					</tr>
+  				</thead>
+  				<tbody>
+  					<tr ng-repeat="network in ctrl.bikeList.networks">
+  						<td>
+  							<a href ng-click="ctrl.showNetworkInfo(network)">{{network.name}}</a>
+  						</td>
+  						<td>
+  							{{ctrl.showCompany(network)}}
+  						</td>
+  					</tr>
+  				</tbody>
+			</table>
+		</div>
+	</div>
+</div>
